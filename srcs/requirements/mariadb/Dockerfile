@@ -2,6 +2,7 @@ FROM	debian:bookworm
 
 RUN	apt-get update && \
 	apt install -y mariadb-server bash && \
+	rm -rf /var/lib/mysql/* && \
 	rm -rf /var/lib/apt/lists/* 
 
 RUN 	mkdir /run/mysqld 
